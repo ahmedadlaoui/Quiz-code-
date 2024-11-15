@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="icons/logo1.svg" alt="website's logo"></a>
+
+        <ul class="nav">
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="admin-dashboard.html">
+                <li>Admin Dashboard</li>
+            </a>
+        </ul>
+        <div class="buttons">
+            <button id="signup">Sign Up</button>
+            <button id="login">Log in</button>
+        </div>
+        <div id="menu-div" style="z-index: 1000;">
+            <img src="icons/menu.svg" id="ham-menu" style="z-index: 1000;">
+            <img src="icons/leave.svg" id="leave" style="display: none;z-index: 1000;">
+        </div>
+    </header>
+    <div id="side-bar"
+        style="width:200px;height: 300px;position: absolute;right: 0;background-color: rgb(252, 240, 216);top:0px;border-bottom: 1px solid black;border-left: 1px solid black;border-bottom-left-radius: 8px;transition: 0.4s all;display: none;">
+        <ul class="ham-nav"
+            style="display: flex;flex-direction: column;height: 100px;justify-content: space-around;margin-top: 70px;">
+            <a href="" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Home</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Admin Dashboard</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Sign Up</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Log In</li>
+            </a>
+        </ul>
+
+    </div>
+
+    <section class="progress-bar">
+        <div class="bar"></div>
+    </section>
+
+    <section class="stats">
+        <h2 class="stats-text">Score : <span id="scorespan"></span></h2>
+        <h2 class="stats-text" id="timer"><img src="icons/timer.svg" alt=""> : <span id="timerspan"></span> </h2>
+        <h2 class="stats-text">Questions : <span id="questionsspan"></span></h2>
+    </section>
+
+    <section class="results" id="share-results" style="display: none;">
+
+        <h1 id="Quiz-title"></h1>
+
+        <div style="display: flex;width: 90%;align-items: center;justify-content: space-between;">
+            <h1 class="stat">Final score :</h1>
+            <h1 id="finalscorespan" style="font-family: poppins;font-size: 20px;"></h1>
+        </div>
+
+        <div style="display: flex;width: 90%;align-items: center;justify-content: space-between;">
+            <h1 class="stat">Correct answers :</h1>
+            <h1 id="correctanswerspan" style="color: green;font-family: poppins;font-size: 20px;"></h1>
+        </div>
+
+        <div style="display: flex;width: 90%;align-items: center;justify-content: space-between;">
+            <h1 class="stat">incorrect answers :</h1>
+            <h1 id="incorrectanswersspan" style="color: red;font-family: poppins;font-size: 20px;"></h1>
+        </div>
+
+        <div style="display: flex;width: 90%;align-items: center;justify-content: space-between;">
+            <h1 class="stat">Record : </h1>
+            <h1 id="recordspan" style="font-family: poppins;font-size: 20px;"></h1>
+        </div>
+
+    </section>
+    <div class="buttons-results" style="display: none;">
+        <button class="results-buttons" onclick="home()">Home</button>
+        <button class="results-buttons" onclick="reload()">Restart</button>
+        <button class="results-buttons" id="to-img" onclick="htmltoimg()">Share results</button>
+    </div>
+    <img src="" id="showImg">
+    <button class="results-buttons" id="share-img" onclick="shareimg()" style="display: none;">download</button>
+
+
+    <section class="show-question">
+        <!-- <div class="question-options">
+            <div class="question">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="options">
+               <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+            </div>
+        </div>
+
+        <div class="question-options">
+            <div class="question">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="last-option">
+                <textarea class="txtareaanswer" name="" id="writing-option" placeholder="Write your answer here ..."></textarea>
+                <button id="submit-text" type="submit" class="writingSubmit">Submit</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="question-options">
+            <div class="question">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="options">
+                <button id="true" class="ToF-buttons">True</button>
+                <button id="false" class="ToF-buttons">False</button>
+            </div>
+        </div> -->
+    </section>
+
+
+    <footer>
+        <div class="child-1">
+            <h4>©copyright</h4>
+            <div class="social-media">
+                <img src="icons/facebook.svg" alt="">
+                <img src="icons/youtube.svg" alt="">
+                <img src="icons/X.svg" alt="">
+                <img src="icons/discord.svg" alt="">
+            </div>
+        </div>
+        <div class="child-2">
+            <ul>
+                <a href="#">
+                    <li>Help</li>
+                </a>
+                <a href="#">
+                    <li>Support</li>
+                </a>
+                <a href="#">
+                    <li>Terms of Use</li>
+                </a>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="login">
+
+</div>
+<body>
+    <header>
+        <a href="index.html"><img src="icons/logo1.svg" alt="website's logo"></a>
+
+        <ul class="nav">
+            <a href="">
+                <li>Home</li>
+            </a>
+            <a href="admin-dashboard.html">
+                <li>Admin Dashboard</li>
+            </a>
+        </ul>
+        <div class="buttons">
+            <button id="signup">Sign Up</button>
+            <button id="login">Log in</button>
+        </div>
+        <div id="menu-div" style="z-index: 1000;">
+            <img src="icons/menu.svg" id="ham-menu" style="z-index: 1000;">
+            <img src="icons/leave.svg" id="leave" style="display: none;z-index: 1000;">
+        </div>
+    </header>
+    <div id="side-bar"
+        style="width:200px;height: 300px;position: absolute;right: 0;background-color: rgb(252, 240, 216);top:0px;border-bottom: 1px solid black;border-left: 1px solid black;border-bottom-left-radius: 8px;transition: 0.4s all;display: none;">
+        <ul class="ham-nav"
+            style="display: flex;flex-direction: column;height: 100px;justify-content: space-around;margin-top: 70px;">
+            <a href="" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Home</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Admin Dashboard</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Sign Up</li>
+            </a>
+            <a href="admin-dashboard.html" style="text-decoration: none;">
+                <li style=" font-family: playfair display;color: black;margin-top: 28px;">Log In</li>
+            </a>
+        </ul>
+
+    </div>
+    <section class="hero">
+        <div class="sub-hero">
+            <div class="texte">
+                <h1>
+                    Explore <span>Quizcode</span> Across Multiple Categories & Levels
+                </h1>
+                <a href="#quizzes-container"><button>Play Now</button></a>
+                <P>"Multiple choice questions (MCQs), true or false questions, and more."</P>
+            </div>
+            <img src="images/hero-img.svg" alt="">
+        </div>
+    </section>
+    <section class="sort">
+        <div class="filter">
+            <div>
+                <h3 id="arrow">Filter by difficulty</h3>
+            </div>
+
+            <div id="easy-div">
+                <label for="easyx">Easy</label>
+                <input type="checkbox" name="sorting" id="easyx">
+            </div>
+
+            <div id="med-div">
+                <label for="mediumx">Medium</label>
+                <input type="checkbox" name="sorting" id="mediumx">
+            </div>
+            <div id="hard-div">
+                <label for="hardx">Hard</label>
+                <input type="checkbox" name="sorting" id="hardx">
+            </div>
+        </div>
+    </section>
+    <section class="after-hero">
+        <div class="sub-after-hero">
+            <div class="quizzes-container" id="quizzes-container">
+                <!-- <div class="quiz-card"> -->
+                <!-- <img src="images/icon.svg" alt="" class="card-icon" id="n"> -->
+                <!-- <h2>Quiz Title</h2>
+                    <p><span class="jsspan">Duration :</span> 180s</p>
+                    <p><span class="jsspan">Categorie :</span> Lorem, ipsum.</p>
+                    <p><span class="jsspan">Difficulty :</span> Hard</p>
+                    <button class="cardbutton">Start</button>
+                </div> -->
+                <!-- <div class="quiz-card">
+                    <h2>Quiz Title</h2>
+                    <p><span class="jsspan">Duration :</span> 180s</p>
+                    <p><span class="jsspan">Categorie :</span> Lorem, ipsum.</p>
+                    <p><span class="jsspan">Difficulty :</span> Hard</p>
+                    <button class="cardbutton">Start</button>
+                </div>
+                <div class="quiz-card">
+                    <h2>Quiz Title</h2>
+                    <p><span class="jsspan">Duration :</span> 180s</p>
+                    <p><span class="jsspan">Categorie :</span> Lorem, ipsum.</p>
+                    <p><span class="jsspan">Difficulty :</span> Hard</p>
+                    <button class="cardbutton">Start</button>
+                </div>
+                <div class="quiz-card">
+                    <h2>Quiz Title</h2>
+                    <p><span class="jsspan">Duration :</span> 180s</p>
+                    <p><span class="jsspan">Categorie :</span> Lorem, ipsum.</p>
+                    <p><span class="jsspan">Difficulty :</span> Hard</p>
+                    <button class="cardbutton">Start</button>
+                </div> -->
+
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="child-1">
+            <h3>©copyright</h3>
+            <div class="social-media">
+                <img src="icons/facebook.svg" alt="">
+                <img src="icons/youtube.svg" alt="">
+                <img src="icons/X.svg" alt="">
+                <img src="icons/discord.svg" alt="">
+            </div>
+        </div>
+        <div class="child-2">
+            <ul>
+                <a href="#">
+                    <li>Help</li>
+                </a>
+                <a href="#">
+                    <li>Support</li>
+                </a>
+                <a href="#">
+                    <li>Terms of Use</li>
+                </a>
+            </ul>
+        </div>
+    </footer>
+    <script src="datatest.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
