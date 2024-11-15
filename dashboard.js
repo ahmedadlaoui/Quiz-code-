@@ -1,4 +1,4 @@
-function colorbutton(){
+function colorbutton() {
     document.getElementById('add-question').style.transition = "0.5s all"
     document.getElementById('add-question').style.background = "green"
     document.getElementById('add-question').textContent = "Question (s) added !"
@@ -30,6 +30,8 @@ document.getElementById('creation-button').addEventListener('click', (e) => {
     if (document.getElementById('medium').checked === true) { diffi = "medium" }
     if (document.getElementById('hard').checked === true) { diffi = "hard" }
 
+
+    if (document.getElementById('title').value !== "" && document.getElementById('description').value !== "" && document.getElementById('category').value !== "") {
         const newquiz = {
             informations: {
                 title: document.getElementById('title').value,
@@ -40,10 +42,10 @@ document.getElementById('creation-button').addEventListener('click', (e) => {
             },
             questions: []
         };
-    
-    quizss.push(newquiz)
-    localStorage.setItem('quizzes-array', JSON.stringify(quizss))
 
+        quizss.push(newquiz)
+        localStorage.setItem('quizzes-array', JSON.stringify(quizss))
+    }
 
 })
 
@@ -67,7 +69,7 @@ document.getElementById('add-question').addEventListener('click', (e) => {
             option2: document.getElementById('false-answer1').value,
             option3: document.getElementById('false-answer2').value,
             option4: document.getElementById('false-answer3').value,
-            trueanswer:document.getElementById('correct-answer').value
+            trueanswer: document.getElementById('correct-answer').value
         };
         selectedQuiz.questions.push(newQcm);
         colorbutton()
@@ -76,7 +78,7 @@ document.getElementById('add-question').addEventListener('click', (e) => {
 
 
 
-    if (document.getElementById('question-ToF').value !== '' && document.getElementById('answer-ToF').value === 'true' ||document.getElementById('answer-ToF').value === 'false' ) {
+    if (document.getElementById('question-ToF').value !== '' && document.getElementById('answer-ToF').value === 'true' || document.getElementById('answer-ToF').value === 'false') {
         const newToF = {
             type: "ToF",
             question: document.getElementById('question-ToF').value,
@@ -99,15 +101,15 @@ document.getElementById('add-question').addEventListener('click', (e) => {
     }
 
     localStorage.setItem('quizzes-array', JSON.stringify(quizss))
-     document.getElementById('question-qcm').value=""
-     document.getElementById('true-answer').value=""
-     document.getElementById('false-answer1').value=""
-     document.getElementById('false-answer2').value=""
-     document.getElementById('false-answer3').value =""
-     document.getElementById('question-writing').value=""
-     document.getElementById('answer-writing').value=""
-     document.getElementById('question-ToF').value=""
-     document.getElementById('answer-ToF').value=""
+    document.getElementById('question-qcm').value = ""
+    document.getElementById('true-answer').value = ""
+    document.getElementById('false-answer1').value = ""
+    document.getElementById('false-answer2').value = ""
+    document.getElementById('false-answer3').value = ""
+    document.getElementById('question-writing').value = ""
+    document.getElementById('answer-writing').value = ""
+    document.getElementById('question-ToF').value = ""
+    document.getElementById('answer-ToF').value = ""
 
 })
 
